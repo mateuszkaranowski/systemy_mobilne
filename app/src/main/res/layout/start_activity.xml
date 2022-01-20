@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/startScene"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="350dp"
+        android:layout_height="173dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="WITAJ W GRZE ABANDONED CRUSH"
+        android:textColor="#BD3E3E"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="220dp"
+        android:layout_height="115dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#C35000"
+        android:onClick="goToStart"
+        android:text="START"
+        android:textColor="#592902"
+        android:textSize="30dp" />
+</LinearLayout>
