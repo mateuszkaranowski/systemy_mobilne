@@ -25,6 +25,8 @@ public class MediumActivity extends AppCompatActivity {
             R.drawable.czolmg4,
             R.drawable.czolmg5,
             R.drawable.czolmg6,
+            R.drawable.level_medium_1,
+            R.drawable.level_medium_2,
     };
     int widthOfBlock, noOfBlock =10, widthOfScreen; // --->zmienić nazwy potem//to są rozmiary
     ArrayList<ImageView> candy = new ArrayList<>();
@@ -93,11 +95,11 @@ public class MediumActivity extends AppCompatActivity {
     }
     private void checkRowForThree()
     {
-        for(int i =0; i<62; i++)
+        for(int i =0; i<98; i++)
         {
             int chosedCandy = (int) candy.get(i).getTag();
             boolean isBlank = (int) candy.get(i).getTag() == notCandy;
-            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47,54,55};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
+            Integer[] notValid = {8,9,24,25,32,33,40,41,48,49,56,57,64,65,72,73,80,81,88,89};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {
@@ -126,7 +128,7 @@ public class MediumActivity extends AppCompatActivity {
 
     private void checkColumnForThree()///////Blad z doelm i gora naprawic
     {
-        for(int i =0; i<47; i++)
+        for(int i =0; i<79; i++)
         {
             int chosedCandy = (int) candy.get(i).getTag();
             boolean isBlank = (int) candy.get(i).getTag() == notCandy;
@@ -155,9 +157,9 @@ public class MediumActivity extends AppCompatActivity {
 
     private void moveDownCandy()
     {
-        Integer[] firstRow = {0,1,2,3,4,5,6,7};
+        Integer[] firstRow = {0,1,2,3,4,5,6,7,8,9};
         List<Integer> list = Arrays.asList(firstRow);
-        for (int i = 55; i >=0;i--)
+        for (int i = 89; i >=0;i--)
         {
             if ((int)candy.get(i + noOfBlock).getTag() == notCandy)
             {
@@ -168,14 +170,14 @@ public class MediumActivity extends AppCompatActivity {
 
                 if(list.contains(i) && (int) candy.get(i).getTag() == notCandy)
                 {
-                    int randomColor = (int) Math.floor(Math.random()*(5 +1)+0);
+                    int randomColor = (int) Math.floor(Math.random()*(7 +1)+0);
 
                     candy.get(i).setImageResource(tableCandy[randomColor]);
                     candy.get(i).setTag(tableCandy[randomColor]);
                 }
             }
         }
-        for(int i =0; i <8; i++)
+        for(int i =0; i <10; i++)
         {
             if((int) candy.get(i).getTag()==notCandy)
             {

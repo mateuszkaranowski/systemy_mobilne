@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         {
             int chosedCandy = (int) candy.get(i).getTag();
             boolean isBlank = (int) candy.get(i).getTag() == notCandy;
-            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47,54,55};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
+            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {

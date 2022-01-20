@@ -18,13 +18,19 @@ import java.util.Arrays;
 import java.util.List;
 
 public class HardActivity extends AppCompatActivity {
-    int[] tableCandy = {
+    int[] tableTank = {
             R.drawable.czolmg1,
             R.drawable.czolmg2,
             R.drawable.czolmg3,
             R.drawable.czolmg4,
             R.drawable.czolmg5,
             R.drawable.czolmg6,
+            R.drawable.level_medium_1,
+            R.drawable.level_medium_2,
+            R.drawable.level_hard_1,
+            R.drawable.level_hard_2,
+            R.drawable.level_hard_3,
+            R.drawable.level_hard_4,
     };
     int widthOfBlock, noOfBlock =14, widthOfScreen; // --->zmienić nazwy potem//to są rozmiary
     ArrayList<ImageView> candy = new ArrayList<>();
@@ -93,11 +99,11 @@ public class HardActivity extends AppCompatActivity {
     }
     private void checkRowForThree()
     {
-        for(int i =0; i<62; i++)
+        for(int i =0; i<194; i++)
         {
             int chosedCandy = (int) candy.get(i).getTag();
             boolean isBlank = (int) candy.get(i).getTag() == notCandy;
-            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47,54,55};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
+            Integer[] notValid = {24,25,36,37,48,49,60,61,72,73,84,85,96,97,108,109,120,132,133,144,145,156,157,168,169,180,181};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {
@@ -126,7 +132,7 @@ public class HardActivity extends AppCompatActivity {
 
     private void checkColumnForThree()///////Blad z doelm i gora naprawic
     {
-        for(int i =0; i<47; i++)
+        for(int i =0; i<167; i++)
         {
             int chosedCandy = (int) candy.get(i).getTag();
             boolean isBlank = (int) candy.get(i).getTag() == notCandy;
@@ -155,9 +161,9 @@ public class HardActivity extends AppCompatActivity {
 
     private void moveDownCandy()
     {
-        Integer[] firstRow = {0,1,2,3,4,5,6,7};
+        Integer[] firstRow = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
         List<Integer> list = Arrays.asList(firstRow);
-        for (int i = 55; i >=0;i--)
+        for (int i = 181; i >=0;i--)
         {
             if ((int)candy.get(i + noOfBlock).getTag() == notCandy)
             {
@@ -168,20 +174,20 @@ public class HardActivity extends AppCompatActivity {
 
                 if(list.contains(i) && (int) candy.get(i).getTag() == notCandy)
                 {
-                    int randomColor = (int) Math.floor(Math.random()*(5 +1)+0);
+                    int randomColor = (int) Math.floor(Math.random()*(11 +1)+0);
 
-                    candy.get(i).setImageResource(tableCandy[randomColor]);
-                    candy.get(i).setTag(tableCandy[randomColor]);
+                    candy.get(i).setImageResource(tableTank[randomColor]);
+                    candy.get(i).setTag(tableTank[randomColor]);
                 }
             }
         }
-        for(int i =0; i <8; i++)
+        for(int i =0; i <14; i++)
         {
             if((int) candy.get(i).getTag()==notCandy)
             {
                 int randomColor = (int) Math.floor(Math.random()*(5 +1)+0);
-                candy.get(i).setImageResource(tableCandy[randomColor]);
-                candy.get(i).setTag(tableCandy[randomColor]);
+                candy.get(i).setImageResource(tableTank[randomColor]);
+                candy.get(i).setTag(tableTank[randomColor]);
             }
         }
     }
@@ -229,9 +235,9 @@ public class HardActivity extends AppCompatActivity {
             viewWithImage.setLayoutParams(new ViewGroup.LayoutParams(widthOfBlock, widthOfBlock));
             viewWithImage.setMaxHeight(widthOfBlock);
             viewWithImage.setMaxWidth(widthOfBlock);
-            int candyRandom = (int) Math.floor(Math.random() * tableCandy.length);//to daje indexy cukierków
-            viewWithImage.setImageResource(tableCandy[candyRandom]);
-            viewWithImage.setTag(tableCandy[candyRandom]);
+            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);//to daje indexy cukierków
+            viewWithImage.setImageResource(tableTank[candyRandom]);
+            viewWithImage.setTag(tableTank[candyRandom]);
             candy.add(viewWithImage);
             layoutGrid.addView(viewWithImage);
         }

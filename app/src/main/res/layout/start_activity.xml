@@ -16,8 +16,8 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="WITAJ W GRZE ABANDONED CRUSH"
-        android:textColor="#BD3E3E"
+        android:text="WITAJ W GRZE TANK CRUSH"
+        android:textColor="#FF5722"
         android:textSize="40dp"
         android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
         android:layout_width="220dp"
         android:layout_height="115dp"
         android:layout_gravity="center"
-        android:backgroundTint="#C35000"
+        android:backgroundTint="#FB7A21"
         android:onClick="goToStart"
         android:text="START"
         android:textColor="#592902"
