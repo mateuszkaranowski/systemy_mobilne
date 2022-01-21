@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MediumActivity extends AppCompatActivity {
-    int[] tableCandy = {
+    int[] tableTank = {
             R.drawable.czolmg1,
             R.drawable.czolmg2,
             R.drawable.czolmg3,
@@ -29,13 +29,13 @@ public class MediumActivity extends AppCompatActivity {
             R.drawable.level_medium_2,
     };
     int widthOfBlock, noOfBlock =10, widthOfScreen; // --->zmienić nazwy potem//to są rozmiary
-    ArrayList<ImageView> candy = new ArrayList<>();
-    int candyToBeDragged, candyToBeReplaced;
-    int notCandy = R.drawable.nobackground;//________________________> super wersja bez cofania jak usune te petle co dorabiaja dalej :)
+    ArrayList<ImageView> tank = new ArrayList<>();
+    int tankToBeDragged, tankToBeReplaced;
+    int notTank = R.drawable.nobackground;//________________________> super wersja bez cofania jak usune te petle co dorabiaja dalej :)
     Handler mHandler = new Handler();
     int interval = 100;
-    TextView scoreResult;
-    int score =0;
+    TextView scoreResult1;
+    int score1 =0;
 
 
 
@@ -45,7 +45,7 @@ public class MediumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.medium_activity);
-        scoreResult = findViewById(R.id.score);
+        scoreResult1 = findViewById(R.id.score);
         DisplayMetrics displayMetrics = new DisplayMetrics(); //wyswietlanie na ekran
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         //tu są rozmiary planszy (8X8)
@@ -54,15 +54,15 @@ public class MediumActivity extends AppCompatActivity {
         widthOfBlock = widthOfScreen/noOfBlock;
         //tworzymy obraz na ekranie -> planszę
         createBoard();
-        for(ImageView imageView:candy)
+        for(ImageView imageView: tank)
         {
             imageView.setOnTouchListener(new MovePiece(this)
             {
                 @Override
                 void onSwipeLeft() {
                     super.onSwipeLeft();
-                    candyToBeDragged = imageView.getId();
-                    candyToBeReplaced = candyToBeDragged -1;
+                    tankToBeDragged = imageView.getId();
+                    tankToBeReplaced = tankToBeDragged -1;
                     candyInterChange();
 
                 }
@@ -70,22 +70,22 @@ public class MediumActivity extends AppCompatActivity {
                 @Override
                 void onSwipeRight() {
                     super.onSwipeRight();
-                    candyToBeDragged = imageView.getId();
-                    candyToBeReplaced = candyToBeDragged +1;
+                    tankToBeDragged = imageView.getId();
+                    tankToBeReplaced = tankToBeDragged +1;
                     candyInterChange();
                 }
                 @Override
                 void onSwipeTop() {
                     super.onSwipeTop();
-                    candyToBeDragged = imageView.getId();
-                    candyToBeReplaced = candyToBeDragged -noOfBlock;
+                    tankToBeDragged = imageView.getId();
+                    tankToBeReplaced = tankToBeDragged -noOfBlock;
                     candyInterChange();
                 }
                 @Override
                 void onSwipeBottom() {
                     super.onSwipeBottom();
-                    candyToBeDragged = imageView.getId();
-                    candyToBeReplaced = candyToBeDragged +noOfBlock;
+                    tankToBeDragged = imageView.getId();
+                    tankToBeReplaced = tankToBeDragged +noOfBlock;
                     candyInterChange();
                 }
             });
@@ -97,27 +97,27 @@ public class MediumActivity extends AppCompatActivity {
     {
         for(int i =0; i<98; i++)
         {
-            int chosedCandy = (int) candy.get(i).getTag();
-            boolean isBlank = (int) candy.get(i).getTag() == notCandy;
+            int chosedCandy = (int) tank.get(i).getTag();
+            boolean isBlank = (int) tank.get(i).getTag() == notTank;
             Integer[] notValid = {8,9,24,25,32,33,40,41,48,49,56,57,64,65,72,73,80,81,88,89};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {
                 int x=i;
-                if((int) candy.get(x++).getTag() == chosedCandy && !isBlank &&
-                        (int) candy.get(x++).getTag() == chosedCandy &&
-                        (int) candy.get(x).getTag() == chosedCandy)
+                if((int) tank.get(x++).getTag() == chosedCandy && !isBlank &&
+                        (int) tank.get(x++).getTag() == chosedCandy &&
+                        (int) tank.get(x).getTag() == chosedCandy)
                 {
-                    score++;
-                    scoreResult.setText(String.valueOf(score));
-                    candy.get(x).setImageResource(notCandy);
-                    candy.get(x).setTag(notCandy);
+                    score1++;
+                    scoreResult1.setText(String.valueOf(score1));
+                    tank.get(x).setImageResource(notTank);
+                    tank.get(x).setTag(notTank);
                     x--;
-                    candy.get(x).setImageResource(notCandy);
-                    candy.get(x).setTag(notCandy);
+                    tank.get(x).setImageResource(notTank);
+                    tank.get(x).setTag(notTank);
                     x--;
-                    candy.get(x).setImageResource(notCandy);
-                    candy.get(x).setTag(notCandy);
+                    tank.get(x).setImageResource(notTank);
+                    tank.get(x).setTag(notTank);
 
                 }
             }
@@ -130,23 +130,23 @@ public class MediumActivity extends AppCompatActivity {
     {
         for(int i =0; i<79; i++)
         {
-            int chosedCandy = (int) candy.get(i).getTag();
-            boolean isBlank = (int) candy.get(i).getTag() == notCandy;
+            int chosedCandy = (int) tank.get(i).getTag();
+            boolean isBlank = (int) tank.get(i).getTag() == notTank;
             int x=i;
-            if((int) candy.get(x).getTag() == chosedCandy && !isBlank &&
-                    (int) candy.get(x+noOfBlock).getTag() == chosedCandy &&
-                    (int) candy.get(x+2*noOfBlock).getTag() == chosedCandy)
+            if((int) tank.get(x).getTag() == chosedCandy && !isBlank &&
+                    (int) tank.get(x+noOfBlock).getTag() == chosedCandy &&
+                    (int) tank.get(x+2*noOfBlock).getTag() == chosedCandy)
             {
-                score++;
-                scoreResult.setText(String.valueOf(score));
-                candy.get(x).setImageResource(notCandy);
-                candy.get(x).setTag(notCandy);
+                score1++;
+                scoreResult1.setText(String.valueOf(score1));
+                tank.get(x).setImageResource(notTank);
+                tank.get(x).setTag(notTank);
                 x = x+noOfBlock;
-                candy.get(x).setImageResource(notCandy);
-                candy.get(x).setTag(notCandy);
+                tank.get(x).setImageResource(notTank);
+                tank.get(x).setTag(notTank);
                 x = x+noOfBlock;
-                candy.get(x).setImageResource(notCandy);
-                candy.get(x).setTag(notCandy);
+                tank.get(x).setImageResource(notTank);
+                tank.get(x).setTag(notTank);
 
             }
 
@@ -161,29 +161,29 @@ public class MediumActivity extends AppCompatActivity {
         List<Integer> list = Arrays.asList(firstRow);
         for (int i = 89; i >=0;i--)
         {
-            if ((int)candy.get(i + noOfBlock).getTag() == notCandy)
+            if ((int) tank.get(i + noOfBlock).getTag() == notTank)
             {
-                candy.get(i+noOfBlock).setImageResource((int) candy.get(i).getTag());
-                candy.get(i+noOfBlock).setTag(candy.get(i).getTag());
-                candy.get(i).setImageResource(notCandy);
-                candy.get(i).setTag(notCandy);
+                tank.get(i+noOfBlock).setImageResource((int) tank.get(i).getTag());
+                tank.get(i+noOfBlock).setTag(tank.get(i).getTag());
+                tank.get(i).setImageResource(notTank);
+                tank.get(i).setTag(notTank);
 
-                if(list.contains(i) && (int) candy.get(i).getTag() == notCandy)
+                if(list.contains(i) && (int) tank.get(i).getTag() == notTank)
                 {
                     int randomColor = (int) Math.floor(Math.random()*(7 +1)+0);
 
-                    candy.get(i).setImageResource(tableCandy[randomColor]);
-                    candy.get(i).setTag(tableCandy[randomColor]);
+                    tank.get(i).setImageResource(tableTank[randomColor]);
+                    tank.get(i).setTag(tableTank[randomColor]);
                 }
             }
         }
         for(int i =0; i <10; i++)
         {
-            if((int) candy.get(i).getTag()==notCandy)
+            if((int) tank.get(i).getTag()== notTank)
             {
                 int randomColor = (int) Math.floor(Math.random()*(5 +1)+0);
-                candy.get(i).setImageResource(tableCandy[randomColor]);
-                candy.get(i).setTag(tableCandy[randomColor]);
+                tank.get(i).setImageResource(tableTank[randomColor]);
+                tank.get(i).setTag(tableTank[randomColor]);
             }
         }
     }
@@ -208,12 +208,12 @@ public class MediumActivity extends AppCompatActivity {
 
     private void candyInterChange()
     {
-        int background =(int) candy.get(candyToBeReplaced).getTag();
-        int background1 =(int) candy.get(candyToBeDragged).getTag();
-        candy.get(candyToBeDragged).setImageResource(background);
-        candy.get(candyToBeReplaced).setImageResource(background1);
-        candy.get(candyToBeDragged).setTag(background);
-        candy.get(candyToBeReplaced).setTag(background1);
+        int background =(int) tank.get(tankToBeReplaced).getTag();
+        int background1 =(int) tank.get(tankToBeDragged).getTag();
+        tank.get(tankToBeDragged).setImageResource(background);
+        tank.get(tankToBeReplaced).setImageResource(background1);
+        tank.get(tankToBeDragged).setTag(background);
+        tank.get(tankToBeReplaced).setTag(background1);
     }
 
     private void createBoard() {
@@ -231,10 +231,10 @@ public class MediumActivity extends AppCompatActivity {
             viewWithImage.setLayoutParams(new ViewGroup.LayoutParams(widthOfBlock, widthOfBlock));
             viewWithImage.setMaxHeight(widthOfBlock);
             viewWithImage.setMaxWidth(widthOfBlock);
-            int candyRandom = (int) Math.floor(Math.random() * tableCandy.length);//to daje indexy cukierków
-            viewWithImage.setImageResource(tableCandy[candyRandom]);
-            viewWithImage.setTag(tableCandy[candyRandom]);
-            candy.add(viewWithImage);
+            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);//to daje indexy cukierków
+            viewWithImage.setImageResource(tableTank[candyRandom]);
+            viewWithImage.setTag(tableTank[candyRandom]);
+            tank.add(viewWithImage);
             layoutGrid.addView(viewWithImage);
         }
     }
