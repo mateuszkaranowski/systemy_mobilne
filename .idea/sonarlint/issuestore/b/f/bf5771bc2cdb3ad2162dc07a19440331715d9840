@@ -1,0 +1,13 @@
+
+—
+java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÌÆåª
+œ
+java:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÈîŽïþÿÿÿÿ
+œ
+java:S1186F"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥œ®“úÿÿÿÿ
+œ
+java:S1186G"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å²§«úÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(íñöûÿÿÿÿ
+V	java:S125?"<This block of commented-out lines of code should be removed.(Ê¿Öåûÿÿÿÿ
+v
+java:S1104	"[Make gestureDetector a static final constant or non-public and provide accessors if needed.(ˆº×àøÿÿÿÿ

@@ -5,3 +5,17 @@ j
 :app/src/main/java/pl/edu/pb/candycrush/ResultActivity.java,3\a\3a53540c2da1bd50e8881af53a213dc993251eeb
 i
 9app/src/main/java/pl/edu/pb/candycrush/LevelActivity.java,a\8\a8d30da313ad86438f09beb722336920fe4db83f
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+e
+5app/src/main/java/pl/edu/pb/candycrush/MovePiece.java,b\f\bf5771bc2cdb3ad2162dc07a19440331715d9840
+j
+:app/src/main/java/pl/edu/pb/candycrush/MediumActivity.java,c\8\c838ef874fab07699925cc5d5de740508015eaf5
+h
+8app/src/main/java/pl/edu/pb/candycrush/GameActivity.java,7\f\7f778b803c54d815db1f873da53576e7d9931549
+h
+8app/src/main/java/pl/edu/pb/candycrush/MainActivity.java,8\9\89524e22ab8eb19a183f8b486aeaa33831ee2be3
+h
+8app/src/main/java/pl/edu/pb/candycrush/HardActivity.java,b\4\b4bd417981f36f6103c8d425c195337a8e9c0da5
+h
+8app/src/main/java/pl/edu/pb/candycrush/UserActivity.java,f\1\f13387f98172ee4005d5aeab22e3175944c3f1ba

@@ -1,0 +1,11 @@
+
+U
+java:S1161":Add the "@Override" annotation above this method signature(ž¨Œþÿÿÿÿ
+Y
+java:S1874">Remove this use of "startActivityForResult"; it is deprecated.(ëÇÍáøÿÿÿÿ
+_
+java:S1874!"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+C
+java:S1604"(Make this anonymous inner class a lambda(´”þ§øÿÿÿÿ
+W
+java:S2259#"BA "NullPointerException" could be thrown; "data" is nullable here.(•ÆÌ
