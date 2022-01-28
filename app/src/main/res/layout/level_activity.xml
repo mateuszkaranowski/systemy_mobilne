@@ -68,7 +68,7 @@
         android:layout_marginLeft="20dp"
         android:layout_gravity="center"
         android:backgroundTint="#FCF0EB"
-        android:text="TABLICA WYNIKÓW"
+        android:text="Odwiedź moją stronę! :)"
         android:onClick="goTable"
         android:textColor="#300E02" />
  </LinearLayout>

@@ -82,7 +82,7 @@
             android:layout_height="80dp"
             android:orientation="horizontal"
             android:onClick="goTable"
-            android:text="Tablica wyników" />
+            android:text="Odwiedź moją stronę! :)" />
     </LinearLayout>
 
 

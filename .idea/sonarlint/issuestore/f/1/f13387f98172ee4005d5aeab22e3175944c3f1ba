@@ -1,25 +1,0 @@
-
-=
-java:S1659""Declare "nick" on a separate line.(·¨•Æşÿÿÿÿ
-@
-java:S1659"%Declare "getData" on a separate line.(î¹˜Êøÿÿÿÿ
-U
-java:S1161":Add the "@Override" annotation above this method signature(¨Œşÿÿÿÿ
-Y
-java:S1874)">Remove this use of "startActivityForResult"; it is deprecated.(ëÇÍáøÿÿÿÿ
-Q	java:S125D"<This block of commented-out lines of code should be removed.(Ó¿Áß
-V	java:S125N"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-_
-java:S1874R"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
-L
-java:S1068"1Remove this unused "userViewModel" private field.(Åéæüÿÿÿÿÿ
-f	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²î‘’
-e	java:S117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿…ƒ
-C
-java:S1604%"(Make this anonymous inner class a lambda(´”ş§øÿÿÿÿ
->
-java:S16041"(Make this anonymous inner class a lambda(éÙÏ–
->
-java:S16048"(Make this anonymous inner class a lambda(–æ´ñ
-W
-java:S2259T"BA "NullPointerException" could be thrown; "data" is nullable here.(•ÆÌ
