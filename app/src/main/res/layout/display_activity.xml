@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back3"
+    android:id="@+id/display"
+    tools:content=".DisplayActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:singleLine="true"
+        android:hint="Podaj imię"
+        android:layout_marginTop="30sp"
+        android:padding="20sp"
+        android:background="@drawable/edittext_background"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:singleLine="true"
+        android:hint="Podaj swój nick"
+        android:layout_marginTop="30sp"
+        android:padding="20sp"
+        android:background="@drawable/edittext_background"/>
+
+</LinearLayout>

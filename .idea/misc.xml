@@ -3,17 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/candycrush/app/src/main/res/drawable-anydpi/ic_plus.xml" value="0.10925925925925926" />
         <entry key="..\:/candycrush/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/candycrush/app/src/main/res/drawable/edittext_background.xml" value="0.2703125" />
         <entry key="..\:/candycrush/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/candycrush/app/src/main/res/drawable/nobackground.xml" value="0.14270833333333333" />
         <entry key="..\:/candycrush/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/candycrush/app/src/main/res/layout/display_activity.xml" value="0.176" />
         <entry key="..\:/candycrush/app/src/main/res/layout/game_activity.xml" value="0.24728260869565216" />
         <entry key="..\:/candycrush/app/src/main/res/layout/hard_activity.xml" value="0.12360688956433637" />
         <entry key="..\:/candycrush/app/src/main/res/layout/level_activity.xml" value="0.25" />
         <entry key="..\:/candycrush/app/src/main/res/layout/medium_activity.xml" value="0.12360688956433637" />
-        <entry key="..\:/candycrush/app/src/main/res/layout/result_activity.xml" value="0.12360688956433637" />
+        <entry key="..\:/candycrush/app/src/main/res/layout/result_activity.xml" value="0.264" />
+        <entry key="..\:/candycrush/app/src/main/res/layout/rv_layout.xml" value="0.4" />
         <entry key="..\:/candycrush/app/src/main/res/layout/start_activity.xml" value="0.1" />
-        <entry key="..\:/candycrush/app/src/main/res/layout/user_activity.xml" value="0.24728260869565216" />
+        <entry key="..\:/candycrush/app/src/main/res/layout/user_activity.xml" value="0.264" />
+        <entry key="..\:/candycrush/app/src/main/res/layout/user_info.xml" value="0.1" />
       </map>
     </option>
   </component>

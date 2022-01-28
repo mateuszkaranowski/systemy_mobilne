@@ -32,10 +32,10 @@ public class HardActivity extends AppCompatActivity {
             R.drawable.level_hard_3,
             R.drawable.level_hard_4,
     };
-    int widthOfBlock, noOfBlock =14, widthOfScreen; // --->zmienić nazwy potem//to są rozmiary
+    int widthOfBlock, noOfBlock =14, widthOfScreen;
     ArrayList<ImageView> tank = new ArrayList<>();
     int tankToBeDragged, tankToBeReplaced;
-    int notTank = R.drawable.nobackground;//________________________> super wersja bez cofania jak usune te petle co dorabiaja dalej :)
+    int notTank = R.drawable.nobackground;
     Handler mHandler = new Handler();
     int interval = 100;
     TextView scoreResult2;
@@ -50,13 +50,13 @@ public class HardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hard_activity);
         scoreResult2 = findViewById(R.id.score);
-        DisplayMetrics displayMetrics = new DisplayMetrics(); //wyswietlanie na ekran
+        DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        //tu są rozmiary planszy (8X8)
+
         widthOfScreen = displayMetrics.widthPixels;
         int heightOfScreen = displayMetrics.heightPixels;
         widthOfBlock = widthOfScreen/noOfBlock;
-        //tworzymy obraz na ekranie -> planszę
+
         createBoard();
         for(ImageView imageView: tank)
         {
@@ -103,7 +103,7 @@ public class HardActivity extends AppCompatActivity {
         {
             int chosedCandy = (int) tank.get(i).getTag();
             boolean isBlank = (int) tank.get(i).getTag() == notTank;
-            Integer[] notValid = {24,25,36,37,48,49,60,61,72,73,84,85,96,97,108,109,120,132,133,144,145,156,157,168,169,180,181};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
+            Integer[] notValid = {24,25,36,37,48,49,60,61,72,73,84,85,96,97,108,109,120,132,133,144,145,156,157,168,169,180,181};
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {
@@ -130,7 +130,7 @@ public class HardActivity extends AppCompatActivity {
         moveDownCandy();
     }
 
-    private void checkColumnForThree()///////Blad z doelm i gora naprawic
+    private void checkColumnForThree()
     {
         for(int i =0; i<167; i++)
         {
@@ -222,12 +222,12 @@ public class HardActivity extends AppCompatActivity {
 
     private void createBoard() {
         GridLayout layoutGrid = findViewById(R.id.sceneGrid);
-        layoutGrid.setRowCount(noOfBlock);//ustawienie ile ma być wierszy i kolumn
+        layoutGrid.setRowCount(noOfBlock);
         layoutGrid.setColumnCount(noOfBlock);
-        layoutGrid.getLayoutParams().width = widthOfScreen;//gdy scena ma być kwadratem
+        layoutGrid.getLayoutParams().width = widthOfScreen;
         layoutGrid.getLayoutParams().height = widthOfScreen;
 
-        //dawanie cukierków na obrazie
+
         for(int k = 0;k<noOfBlock*noOfBlock;k++)
         {
             ImageView viewWithImage = new ImageView(this);
@@ -235,7 +235,7 @@ public class HardActivity extends AppCompatActivity {
             viewWithImage.setLayoutParams(new ViewGroup.LayoutParams(widthOfBlock, widthOfBlock));
             viewWithImage.setMaxHeight(widthOfBlock);
             viewWithImage.setMaxWidth(widthOfBlock);
-            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);//to daje indexy cukierków
+            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);
             viewWithImage.setImageResource(tableTank[candyRandom]);
             viewWithImage.setTag(tableTank[candyRandom]);
             tank.add(viewWithImage);

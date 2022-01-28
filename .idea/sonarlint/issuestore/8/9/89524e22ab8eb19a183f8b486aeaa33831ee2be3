@@ -1,0 +1,31 @@
+
+\
+java:S1659"FDeclare "noOfBlock" and all following declarations on a separate line.(®à•
+K
+java:S1659".Declare "tankToBeReplaced" on a separate line.(¨Ğåø8Ûüíßç/
+E
+java:S1874!"/Remove this use of "Handler"; it is deprecated.(Äÿ¬ğ
+]
+java:S18543"BRemove this useless assignment to local variable "heightOfScreen".(Ñ†åıÿÿÿÿ
+O
+java:S18740"9Remove this use of "getDefaultDisplay"; it is deprecated.(ıÜŠá
+H
+java:S18740"2Remove this use of "getMetrics"; it is deprecated.(ıÜŠá
+N
+java:S14813"3Remove this unused "heightOfScreen" local variable.(Ñ†åıÿÿÿÿ
+J
+java:S1874["/Remove this use of "Handler"; it is deprecated.(ŠË»‡ÿÿÿÿÿ
+f
+java:S1764j"KCorrect one of the identical sub-expressions on both sides of operator "&&"(³›¬âÿÿÿÿÿ
+G
+java:S1172ğ"+Remove this unused method parameter "view".(ù™…“ûÿÿÿÿ
+G
+java:S1172ö"+Remove this unused method parameter "view".(şşÍÖøÿÿÿÿ
+B
+java:S1172û"+Remove this unused method parameter "view".(çí§¤
+U
+java:S3398"?Move this method into the anonymous class declared at line 189.(ÎÚ¢—
+Z
+java:S3398^"?Move this method into the anonymous class declared at line 189.(ˆÊÙÊùÿÿÿÿ
+>
+java:S1604½"(Make this anonymous inner class a lambda(–ª=

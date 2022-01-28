@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         R.drawable.czolmg5,
         R.drawable.czolmg6,
     };
-    int widthOfBlock, noOfBlock =8, widthOfScreen; // --->zmienić nazwy potem//to są rozmiary
+    int widthOfBlock, noOfBlock =8, widthOfScreen;
     ArrayList<ImageView> tank = new ArrayList<>();
     int tankToBeDragged, tankToBeReplaced;
-    int notTank = R.drawable.nobackground;//________________________> super wersja bez cofania jak usune te petle co dorabiaja dalej :)
+    int notTank = R.drawable.nobackground;
     Handler mHandler = new Handler();
     int interval = 100;
     TextView scoreResult;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         scoreResult = findViewById(R.id.score);
-        DisplayMetrics displayMetrics = new DisplayMetrics(); //wyswietlanie na ekran
+        DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         //tu są rozmiary planszy (8X8)
         widthOfScreen = displayMetrics.widthPixels;
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         {
             int chosedCandy = (int) tank.get(i).getTag();
             boolean isBlank = (int) tank.get(i).getTag() == notTank;
-            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47};//pasujace do danych kolumn numerki(nie moze być tam 3 cukierkow)
+            Integer[] notValid = {6,7,14,15,22,23,30,31,38,39,46,47};
             List<Integer> list = Arrays.asList(notValid);
             if(!list.contains(i))
             {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         moveDownCandy();
     }
 
-    private void checkColumnForThree()///////Blad z doelm i gora naprawic
+    private void checkColumnForThree()
     {
         for(int i =0; i<47; i++)
         {
@@ -216,9 +216,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void createBoard() {
         GridLayout layoutGrid = findViewById(R.id.sceneGrid);
-        layoutGrid.setRowCount(noOfBlock);//ustawienie ile ma być wierszy i kolumn
+        layoutGrid.setRowCount(noOfBlock);
         layoutGrid.setColumnCount(noOfBlock);
-        layoutGrid.getLayoutParams().width = widthOfScreen;//gdy scena ma być kwadratem
+        layoutGrid.getLayoutParams().width = widthOfScreen;
         layoutGrid.getLayoutParams().height = widthOfScreen;
 
         //dawanie cukierków na obrazie
@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
             viewWithImage.setLayoutParams(new ViewGroup.LayoutParams(widthOfBlock, widthOfBlock));
             viewWithImage.setMaxHeight(widthOfBlock);
             viewWithImage.setMaxWidth(widthOfBlock);
-            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);//to daje indexy cukierków
+            int candyRandom = (int) Math.floor(Math.random() * tableTank.length);
             viewWithImage.setImageResource(tableTank[candyRandom]);
             viewWithImage.setTag(tableTank[candyRandom]);
             tank.add(viewWithImage);

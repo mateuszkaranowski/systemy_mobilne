@@ -27,10 +27,6 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".GameActivity"
-            android:exported="true">
-        </activity>
-        <activity
             android:name=".LevelActivity"
             android:exported="true">
         </activity>
@@ -43,6 +39,14 @@
             android:exported="true">
         </activity> <activity
             android:name=".ResultActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DisplayActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".GetData"
             android:exported="true">
         </activity>
     </application>
